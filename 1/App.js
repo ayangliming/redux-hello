@@ -12,9 +12,10 @@ import {
   Link
 } from 'react-router-dom'
 
-const Header = () => (
+const Header =()=>(
   <Link to="/" className="back-home">首页</Link>
 )
+
 
 class App extends Component {
 
@@ -22,13 +23,13 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div>
-            <Header />
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route path="/post/:id" component={PostPage} />
-            </Switch>
-          </div>
+        <div>
+           <Header />
+           <Switch>
+             <Route exact path="/" component={HomePage} />
+             <Route path="/post/:id" component={PostPage} />
+           </Switch>
+        </div>
         </Router>
       </Provider>
 
